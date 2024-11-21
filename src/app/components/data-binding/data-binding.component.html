@@ -1,0 +1,51 @@
+<p>data-binding works!</p>
+<div class="col-3">
+    One  Way Data Binding   - from .ts to .html 
+</div>
+<div class="col-3">
+
+</div>
+<div class="col-3">
+
+</div>
+<div class="col-4">
+    <div class="row">
+        <div class="col-4 bg-success">
+            Interpolation
+           <h3 > {{courseName}} </h3>                    
+           <div>{{inputType}}</div>
+           <input type="text" value="{{courseName}}" placeholder="Enter Value">
+           <input type="{{inputType}}">
+        </div>
+    </div>
+</div>
+<div class="col-4">
+      Property Binding 
+<div [class] ="myClassName"> Denger </div>
+<input type="text" [value]="courseName">
+<input [type]="inputType">
+</div>
+<div class="col-4">
+    One Way Data Binding - from .html to .ts 
+    <button class="btn btn-success"(click)="showAlert('well Come To Angular18')">Show Wellcome</button>
+    <span (click)="showAlert('This is from span')">Click Me!!</span>
+    <button class="btn btn-success"(click)="changeCourseName()">changeCourseName</button>
+</div>
+<br>
+<div>
+   <h2 id="Very Importent"> Two Way Data Binding.</h2>
+    <div>
+        <input type="text" [(ngModel)]="courseName"/> - {{courseName}}
+        <input type="checkbox" [(ngModel)]="isIndian"/>
+        <select [(ngModel)]="stringName">
+            <option value="Andrapradesh">Andrapradesh</option>
+            <option value="Assam">Assam</option>
+            <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+            <option value="Telangana">Telangana</option>
+        </select>
+    </div>
+</div>
+<div>
+  <h3>  Using Signal (angular 17 onwards) </h3>
+    <h2>{{firstName()}}</h2> 
+</div>

@@ -1,0 +1,48 @@
+<div class="mt-2 p-2 bg-primary text-black rounded">
+    <h2>Pipe</h2>
+</div>
+<div class="row">
+    <div class="col-3 bg-secondary">
+        Original Value = {{firstName}};
+        <br/>
+        pipe Value = {{firstName | uppercase}}
+    </div>
+    <div class="col-3 bg-danger">
+       Original Value = {{secondName}}
+       <br/>
+       pipe Value = {{secondName | lowercase }}
+    </div>
+    <div class="col-3 bg-warning" >
+        Original Value = {{thirdName}}
+        <br/>
+        pipe Value = {{thirdName | titlecase }}
+    </div>
+    <div class="col-3 bg-secondary">
+        Original Value = {{curentDate}}
+        <br/>
+        after Pipe = {{curentDate|date}}
+    </div>
+    <div class="col-3 bg-primary">
+        Original Value = {{curentDate|date:'dd-MM-yyyy'}}
+        <br/>
+        after Pipe = {{curentDate|date:'dd/MMM/yy'}}
+    </div>
+</div>
+<div class="row">
+    <div class="col-3 bg-success">
+        Original Value = {{student}}
+        <br/>
+        after Pipe Value = {{student|json}}
+    </div>
+    <div class="col-3 bg-secondary">
+        Original Value = {{currentTime}}
+        <br/>
+        after Pipe Value = {{currentTime|async}}
+        after Pipe Value = {{currentTime|async|date :'hh:mm:ss'}}
+    </div>
+    <div class="col-3 bg-success">
+        Original Value = {{student.state}}
+        <br/>
+        after Pipe Value = {{student.state|na}}
+    </div>
+</div>

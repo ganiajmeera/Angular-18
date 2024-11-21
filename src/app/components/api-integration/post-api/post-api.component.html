@@ -1,0 +1,76 @@
+
+<div class="mt-2 p-2 bg-success text-white rounded">
+    <h3>POST API</h3>
+<h3>Create Dapartment ,DepartmentList</h3>
+</div>
+<div class="row pt-2">
+    <div class="col-8">
+        <div class="card">
+            <div class="card-header bg-secondary text-white">
+                DepartmentList
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Sr No</th>
+                                <th>Name</th>
+                                <th>City</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @for (item of deptList; track $index) {
+                            <tr>
+                                <th>{{$index+1}}</th>
+                                <th>{{item.departmentName}}</th>
+                                <th>{{item.departmentLogo}}</th>
+                                <th></th>
+                            </tr>
+                        }
+                        </tbody>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="col-4">
+    <div class="card">
+        <div class="card-header bg-secondary text-white">
+            New Department
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-12">
+                    <label for="">Department</label>
+                    <input type="text" class="form-control" placeholder="enter name">
+
+                </div>
+            </div>
+            <div class="col-12">
+                <label for="">Department Logo</label>
+                <input type="text" class="form-control" placeholder="enter logo Url">
+            </div>
+        </div>
+        <div class="row pt-3">
+            <div class="col-6 text-center">
+                <button  [(ngModel)]="deptObj.departmentName" class="btn btn-primary">
+                    Reset
+                </button>
+            </div>
+            <div class="col-6 text-center">
+                <button [(ngModel)]="deptObj.departmentLogo" class="btn btn-success" (click)="Onsave()">
+                   save
+                </button>
+            </div>
+        </div>
+        <table>
+            <th>
+
+            </th>
+        </table>
+    </div>
+</div>
